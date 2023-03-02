@@ -1,0 +1,18 @@
+-----------------------------------------------------------------
+🔴 Problem: {EVENT.NAME}
+
+{TRIGGER.ID}#{EVENT.ID}#FF0000#10800#
+<b>Inició en: </b>{EVENT.DATE} - {EVENT.TIME}
+<b>Despositivo: </b>{HOST.NAME}
+<b>Ultimo valor: </b>{ITEM.LASTVALUE}
+<b>Notas adicionales: </b><br>{TRIGGER.DESCRIPTION}<br>
+-----------------------------------------------------------------
+✅ Resolved - {EVENT.NAME} - Duración: {EVENT.DURATION}
+
+{TRIGGER.ID}#{EVENT.ID}#00C800#3600#
+<b>Inició en:</b> {EVENT.DATE} - {EVENT.TIME}
+<b>Despositivo:</b>{HOST.NAME}
+<b>Ultimo valor: </b>{ITEM.LASTVALUE}
+<b>Duración: </b>{EVENT.DURATION}
+<b>Notas adicionales: </b><br>{TRIGGER.DESCRIPTION}<br>
+-----------------------------------------------------------------

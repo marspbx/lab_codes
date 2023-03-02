@@ -1,0 +1,29 @@
+<b>Discovery rule:</b> {DISCOVERY.RULE.NAME} 
+<b>Action Rule:</b>{ACTION.NAME}
+<br><br><br>
+<b>Device IP:</b> {DISCOVERY.DEVICE.IPADDRESS}<br> 
+<b>Device DNS:</b> {DISCOVERY.DEVICE.DNS}<br>
+<b>Device status:</b> {DISCOVERY.DEVICE.STATUS}<br>
+<b>Device uptime:</b> {DISCOVERY.DEVICE.UPTIME}<br><br>
+<br><br><br>
+<b>Device service name:</b> {DISCOVERY.SERVICE.NAME}<br>
+<b>Device service port:</b> {DISCOVERY.SERVICE.PORT}<br>
+<b>Device service status:</b> {DISCOVERY.SERVICE.STATUS}<br>
+<b>Device service uptime:</b> {DISCOVERY.SERVICE.UPTIME}
+<br><br><br>
+<b>Event:</b>{EVENT.STATUS}
+
+----------------------------------------------------------------
+DISCOVERY HOST {DISCOVERY.DEVICE.STATUS} - {DISCOVERY.DEVICE.DNS}
+
+
+<b>Discovery rule:</b> {DISCOVERY.RULE.NAME}
+<br>
+<b>Action Rule:</b>{ACTION.NAME}
+<br><br>
+<b>Device IP:</b> {DISCOVERY.DEVICE.IPADDRESS}<br> 
+<b>Device DNS:</b> {DISCOVERY.DEVICE.DNS}<br>
+<b>Device status:</b> {DISCOVERY.DEVICE.STATUS}<br>
+<b>Device uptime:</b> {DISCOVERY.DEVICE.UPTIME}<br>
+
+<b>Date:</b>{DATE}

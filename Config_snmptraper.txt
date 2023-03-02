@@ -1,0 +1,45 @@
+# Configure SNMP Traper #
+
+# Install Packets
+
+sudo apt install snmp snmp-mibs-downloader snmptrapd
+
+sudo apt install snmptrapd perl libxml-simple-perl libsnmp-perl
+
+# Donwload Projeto Zabbix
+
+sudo wget https://git.zabbix.com/projects/ZBX/repos/zabbix/raw/misc/snmptrap/zabbix_trap_receiver.pl -O /etc/zabbix/zabbix_trap_receiver.pl
+
+# Permission File
+
+sudo chmod 777 /etc/zabbix/zabbix_trap_receiver.pl
+
+# Create folder
+
+sudo mkdir /var/log/snmptrap/
+
+sudo chmod 777 /var/log/snmptrap/
+
+# Edit File Config
+
+sudo vi /etc/snmp/snmptrapd.conf
+
+SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+
+# Adicione as linas no arquivo
+
+echo 'authCommunity execute public' | sudo tee -a /etc/snmp/snmptrapd.conf
+echo 'perl do "/usr/bin/zabbix_trap_receiver.pl";' | sudo tee -a /etc/snmp/snmptrapd.conf
+
+
+# Edit File config .pl
+
+sudo vi /etc/zabbix/zabbix_trap_receiver.pl
+
+SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+
+
+# Teste
+
+snmptrap -v 2c -c public 127.0.0.1 "" 1.3.6.1.4.1.8072.9999.9999
+

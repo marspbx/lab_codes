@@ -1,0 +1,34 @@
+# Install Zabbix Proxy #
+
+
+https://www.zabbix.com/download?zabbix=6.2&os_distribution=ubuntu&os_version=22.04&components=proxy&db=sqlite3&ws=
+
+ProxyMode=0
+Server=10.29.35.194
+Hostname=R-PRX-JUJ-00
+ListenPort=10051
+LogFile=/var/log/zabbix/zabbix_proxy.log
+EnableRemoteCommands=1
+LogRemoteCommands=1
+DBName=/tmp/r-prx-juju-db
+ProxyLocalBuffer=0
+ProxyOfflineBuffer=8
+ConfigFrequency=60
+CacheSize=1024M
+
+StartPollers=5
+
+################################################
+
+10.155.110.66
+
+
+Config HA
+
+HANodeName-Ha1
+NodeAddress=XXX.XXX.XXX.XXX
+AallowUnsupportedDBVersions=1
+
+
+
+
